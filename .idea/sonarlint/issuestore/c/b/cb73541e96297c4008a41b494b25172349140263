@@ -1,0 +1,76 @@
+
+W
+java:S4973¿"9Use the "equals" method if value comparison was intended.(¾É²”8©ŒÍ“.
+Z	java:S106r"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8º¸“.
+p
+java:S3776¥"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(§‚º8º¸“.
+c
+java:S11929"FDefine a constant instead of duplicating this literal "Route" 3 times.(ëéı»8ï£÷“.
+n	java:S117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§‚º8º¸“.
+e
+java:S2095Ó"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8­¹Û“.
+z	java:S127Á"XRefactor the code in order to not assign to this loop counter from within the loop body.(ö¨µÕÿÿÿÿÿ8Ï€Î“.
+o
+java:S1104%"ZMake currentAirline a static final constant or non-public and provide accessors if needed.(Ò¦Â4
+e
+java:S2095ğ"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8º¸“.
+p
+java:S1192×"MDefine a constant instead of duplicating this literal "municipality" 4 times.(³ñØêüÿÿÿÿ8íÛé“.
+>
+java:S2189g""Add an end condition to this loop.(¤èÄ78º¸“.
+e
+java:S2095Ô"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8­¹Û“.
+p
+java:S3776‹"RRefactor this method to reduce its Cognitive Complexity from 79 to the 15 allowed.(ĞÆÒ«8º¸“.
+^	java:S125"<This block of commented-out lines of code should be removed.(üşÿÕûÿÿÿÿ8º¸“.
+e
+java:S2095Ç"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ı Ÿ8º¸“.
+F
+java:S1148â"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¸“.
+U	java:S106t"9Replace this use of System.out or System.err by a logger.(ƒÀÌ£8º¸“.
+e
+java:S2095ç"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8íÛé“.
+I
+java:S1444%"4Make this "public static currentAirline" field final(Ò¦Â4
+N	java:S106F"9Replace this use of System.out or System.err by a logger.(¯åûì
+e
+java:S2095¬"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(™¡½±8º¸“.
+Z
+java:S2589"7Remove this expression which always evaluates to "true"(¤Ú©Êùÿÿÿÿ8º¸“.
+e
+java:S2095Ñ"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(ı Ÿ8º¸“.
+:
+java:S1643Ç"Use a StringBuilder instead.(Ü‚û8Ï€Î“.
+U	java:S106†"9Replace this use of System.out or System.err by a logger.(ÌÆÚo8º¸“.
+F
+java:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¸“.
+:
+java:S1643¾"Use a StringBuilder instead.(ÊÍÀ8º¸“.
+e
+java:S2095ñ"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8º¸“.
+E
+java:S1148s"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8º¸“.
+j
+java:S2095°"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(®”ï²ùÿÿÿÿ8º¸“.
+e
+java:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8º¸“.
+:
+java:S1643Ã"Use a StringBuilder instead.(Ãê¤ë8Ï€Î“.
+V	java:S125["<This block of commented-out lines of code should be removed.(£áõ¶ıÿÿÿÿ
+U	java:S106Ÿ"9Replace this use of System.out or System.err by a logger.(áŒª08º¸“.
+e
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8º¸“.
+I
+java:S1481Á"&Remove this unused "j" local variable.(ö¨µÕÿÿÿÿÿ8Ï€Î“.
+[	java:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8º¸“.
+[	java:S106…"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8º¸“.
+k
+java:S1192¢"HDefine a constant instead of duplicating this literal "No Info" 4 times.(°ñ¼Ñÿÿÿÿÿ8º¸“.
+e
+java:S2095æ"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8íÛé“.
+W
+java:S4973¿"9Use the "equals" method if value comparison was intended.(¾É²”8©ŒÍ“.
+F
+java:S1148‡"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‡§ì“.
+[	java:S106†"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8‡§ì“.
+[	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(ü°‹Ñşÿÿÿÿ8‡§ì“.

@@ -1,0 +1,14 @@
+
+V
+java:S4973T"9Use the "equals" method if value comparison was intended.(„Şâå8Êê‹“.
+W
+java:S1128"<Remove this unused import 'javafx.scene.chart.ScatterChart'.(Ö§¤Ëÿÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¿Šº
+V	java:S125d"<This block of commented-out lines of code should be removed.(€ÂÒìşÿÿÿÿ
+S	java:S106c"9Replace this use of System.out or System.err by a logger.(—Š¡üùÿÿÿÿ
+N	java:S106i"9Replace this use of System.out or System.err by a logger.(¦ßóŞ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(³’¢øÿÿÿÿ
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ûÊÄÒ
+9
+java:S1148h"#Use a logger to log this exception.(Ç’Çê

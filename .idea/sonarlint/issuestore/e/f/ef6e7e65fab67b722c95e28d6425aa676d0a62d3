@@ -1,0 +1,20 @@
+
+t
+java:S1171	"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+]
+java:S1192"GDefine a constant instead of duplicating this literal "United" 4 times.(Áƒ’÷
+;
+java:S2386“"Make this member "protected".(Ê©Å‡8¡°èë’.
+t
+java:S1192
+"RDefine a constant instead of duplicating this literal "American Airlines" 4 times.(À²·‘ıÿÿÿÿ8¦Àì’.
+P
+java:S1118":Add a private constructor to hide the implicit public one.(áŒÇ
+a
+java:S1192"FDefine a constant instead of duplicating this literal "Delta" 3 times.(ñåÏûÿÿÿÿ
+G
+java:S3599",Use another way to initialize this instance.(ÒÌâ–øÿÿÿÿ
+9
+java:S2386’"Make this member "protected".(õåÔ¢ûÿÿÿÿ
+@
+java:S2386”"Make this member "protected".(ö¨×şÿÿÿÿ8ºñŒÍ’.

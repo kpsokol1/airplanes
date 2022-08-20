@@ -1,0 +1,58 @@
+
+M
+java:S1066•"/Merge this if statement with the enclosing one.(¶¢ÉÁ8²™ƒ“.
+b
+java:S1854°"?Remove this useless assignment to local variable "alreadySent".(ØÓ„ûÿÿÿÿ8²™ƒ“.
+d
+java:S2095m"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8©»À“.
+o
+java:S1192<"RDefine a constant instead of duplicating this literal "\nFlightRadar24: " 6 times.(Üéæ—8²™ƒ“.
+^	java:S125†"<This block of commented-out lines of code should be removed.(¾ıÀóúÿÿÿÿ8²™ƒ“.
+[	java:S106†"9Replace this use of System.out or System.err by a logger.(†ˆ®¶øÿÿÿÿ8²™ƒ“.
+d
+java:S2095 "GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8²™ƒ“.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£¡Šƒ8²™ƒ“.
+g
+java:S11923"JDefine a constant instead of duplicating this literal "Callsign" 20 times.(ıÚï§8²™ƒ“.
+[	java:S106á"9Replace this use of System.out or System.err by a logger.(†ˆ®¶øÿÿÿÿ8²™ƒ“.
+j
+java:S1192<"MDefine a constant instead of duplicating this literal "\nCallsign: " 6 times.(Üéæ—8²™ƒ“.
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8²™ƒ“.
+g
+java:S1192<"JDefine a constant instead of duplicating this literal "Aircraft" 10 times.(Üéæ—8²™ƒ“.
+f
+java:S1192<"IDefine a constant instead of duplicating this literal "\nType: " 6 times.(Üéæ—8²™ƒ“.
+j
+java:S1192<"MDefine a constant instead of duplicating this literal " Plane Alert" 6 times.(Üéæ—8²™ƒ“.
+]	java:S1256"<This block of commented-out lines of code should be removed.(¾ıÀóúÿÿÿÿ8²™ƒ“.
+Z	java:S106w"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8²™ƒ“.
+[	java:S106ü"9Replace this use of System.out or System.err by a logger.(Ùı×¸ùÿÿÿÿ8²™ƒ“.
+E
+java:S1148S"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²™ƒ“.
+[	java:S106…"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8Ê×Ã“.
+|
+java:S1192<"_Define a constant instead of duplicating this literal "https://www.flightradar24.com/" 6 times.(Üéæ—8²™ƒ“.
+r	java:S117l"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Óé’µùÿÿÿÿ8²™ƒ“.
+a
+java:S1854]"?Remove this useless assignment to local variable "alreadySent".(ØÓ„ûÿÿÿÿ8²™ƒ“.
+c
+java:S2095n"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(İ¡ìX8²™ƒ“.
+E
+java:S1148x"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²™ƒ“.
+F
+java:S1148¦"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²™ƒ“.
+u
+java:S1192<"XDefine a constant instead of duplicating this literal "sokolky20@stxtigers.com" 6 times.(Üéæ—8²™ƒ“.
+p
+java:S3776"SRefactor this method to reduce its Cognitive Complexity from 124 to the 15 allowed.(õùº€8Í†ŠÍ’.
+[	java:S106à"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8Ê×Ã“.
+M
+java:S1144æ"*Remove this unused private "setPK" method.(Â›Ô…ûÿÿÿÿ8²™ƒ“.
+E
+java:S1148)"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8²™ƒ“.
+P
+java:S1118":Add a private constructor to hide the implicit public one.(„âÒÉ
+[	java:S106û"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8Ê×Ã“.
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(µÔÎÚøÿÿÿÿ8Á…î“.
+X	java:S125"<This block of commented-out lines of code should be removed.(õõÀŞ8Á…î“.

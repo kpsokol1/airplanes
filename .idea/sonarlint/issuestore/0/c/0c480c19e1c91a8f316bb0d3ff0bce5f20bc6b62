@@ -1,0 +1,23 @@
+
+2
+java:S1643N"Use a StringBuilder instead.(ªÈ”È
+U
+java:S1118":Add a private constructor to hide the implicit public one.(žˆž‚ÿÿÿÿÿ
+i
+java:S2095K"NUse try-with-resources or close this "DataOutputStream" in a "finally" clause.(åðç¥ûÿÿÿÿ
+N	java:S106]"9Replace this use of System.out or System.err by a logger.(Ü£•ê
+N	java:S1069"9Replace this use of System.out or System.err by a logger.(Ü£•ê
+d
+java:S4042X"IUse "java.nio.Files#delete" here for better messages on error conditions.(‹Õþ þÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+V	java:S125-"<This block of commented-out lines of code should be removed.(æõ¢¡ûÿÿÿÿ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(´Ñ…ûÿÿÿÿ
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
+g
+java:S2095H"LUse try-with-resources or close this "BufferedReader" in a "finally" clause.(³÷©Üüÿÿÿÿ
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
+R	java:S899Y"=Do something with the "boolean" value returned by "renameTo".(¾é–Ö
+S	java:S106\"9Replace this use of System.out or System.err by a logger.(©þêÜúÿÿÿÿ
+]
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(Êë‹

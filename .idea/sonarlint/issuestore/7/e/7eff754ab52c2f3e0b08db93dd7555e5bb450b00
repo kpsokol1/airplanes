@@ -1,0 +1,28 @@
+
+[
+java:S4973"9Use the "equals" method if value comparison was intended.(¦ë·×üÿÿÿÿ8Ì¨ë“.
+L
+java:S1481I"/Remove this unused "folderPath" local variable.(ç©Èø8é®±“.
+]	java:S1257"<This block of commented-out lines of code should be removed.(»ÎÙ²ùÿÿÿÿ8§šŒ“.
+[
+java:S1854I">Remove this useless assignment to local variable "folderPath".(ç©Èø8é®±“.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÑ¿Ÿ8‚ä¼“.
+\
+java:S1118":Add a private constructor to hide the implicit public one.(­ï±Æşÿÿÿÿ8±éÒŒ“.
+X	java:S125&"<This block of commented-out lines of code should be removed.(Îé³ı8Íå‰“.
+d
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(˜ğ×8“ò±“.
+E
+java:S1148A"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8é®±“.
+W	java:S125L"<This block of commented-out lines of code should be removed.(óˆ³n8é®±“.
+X	java:S125o"<This block of commented-out lines of code should be removed.(Ø²Ï±8é®±“.
+]	java:S125/"<This block of commented-out lines of code should be removed.(ù¹¢öúÿÿÿÿ8§šŒ“.
+>
+java:S1643V"Use a StringBuilder instead.(êèïÎûÿÿÿÿ8é®±“.
+d
+java:S2095"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(² €í8“ò±“.
+Z	java:S106^"9Replace this use of System.out or System.err by a logger.(—¿‹»ıÿÿÿÿ8é®±“.
+E
+java:S1148b"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8é®±“.
+E
+java:S1148u"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8é®±“.

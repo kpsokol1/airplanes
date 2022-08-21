@@ -90,7 +90,7 @@ public class Parser
 
             //If pass additional file name as argument then process this file as aircraft database
             if (args.length == 4) {
-                parseTextFile(conn, args[3], "Aircrafts_1", ","); //All Airplanes Database
+                parseTextFile(conn, args[3], "Aircrafts", ","); //All Airplanes Database
                 System.out.println("Done");
                 return;
             }

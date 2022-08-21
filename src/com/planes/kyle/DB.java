@@ -70,6 +70,11 @@ class DB {
 
         //Write changes to DB
         stmtEL.executeUpdate(sql.toString());
+
+        //Add index to ICAO column
+        if(tableName.contains("Raw") || tableName.contains("Clean")){
+            stmtEL.executeUpdate("CREATE INDEX " + tableName +"_ICAO_index on " + tableName +" (ICAO)");
+        }
         stmtEL.close();
     }
     private static void populateSQLQuery(HashMap<String, String> aircraftData, String table) throws SQLException {

@@ -51,6 +51,12 @@ class FileParser {
                     " LINES TERMINATED BY '\\r\\n'" +
                     " IGNORE 1 LINES";
             stmt.executeUpdate(sql);
+
+            //Add index to icao24 column on Aicrafts table
+            if (table.equals("Aircrafts")){
+                sql = "CREATE INDEX Aircrafts_icao24_index ON Aircrafts (icao24)";
+                stmt.executeUpdate(sql);
+            }
         }
         catch (IOException | SQLException e) {
             System.out.println(e.getMessage());

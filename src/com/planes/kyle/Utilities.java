@@ -23,8 +23,7 @@ class Utilities {
 
         //Ignore record if it starts with "~"
         if (!ICAO.startsWith("~")) {
-            //String filePath = "C:/Users/kyle/Documents";
-            String filePath = "/home/pi/";
+            String filePath = Constants.getImageFilePath();
 
             String planeRegistration = "";
             String query = "SELECT registration FROM Aircrafts WHERE icao24 ='" + ICAO + "'";
@@ -80,12 +79,12 @@ class Utilities {
                 else {
                     if (callsign == null) {
                         try {
-                            String _query = "SELECT Callsign FROM `" + RAW_DATA_TABLE + "` WHERE Callsign IS NOT NULL AND ICAO = '" + aircraftData.get("ICAO")+"' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "' ORDER BY TIME desc limit 1";
+                            String _query = "SELECT Callsign FROM `" + Constants.getRawDataTable() + "` WHERE Callsign IS NOT NULL AND ICAO = '" + aircraftData.get("ICAO")+"' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "' ORDER BY TIME desc limit 1";
                             Statement st = conn.createStatement();
                             ResultSet rs = st.executeQuery(_query);
                             if (rs.next()) {
                                 aircraftData.put("Callsign", rs.getString("Callsign"));
-                                String _query1 = "SELECT Airline as Airline FROM `" + RAW_DATA_TABLE + "` WHERE Airline != \'No Info\' AND ICAO = '" + aircraftData.get("ICAO")+"' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "' ORDER BY TIME desc limit 1";
+                                String _query1 = "SELECT Airline as Airline FROM `" + Constants.getRawDataTable() + "` WHERE Airline != \'No Info\' AND ICAO = '" + aircraftData.get("ICAO")+"' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "' ORDER BY TIME desc limit 1";
                                 Statement _st1 = conn.createStatement();
                                 ResultSet _rs2 = _st1.executeQuery(_query1);
                                 if(_rs2.next()){
@@ -224,7 +223,22 @@ class Utilities {
     static String getAuth(String key) {
         try {
             Properties properties = new Properties();
-            properties.load(new FileInputStream(new File(CREDENTIALS_FILE_NAME)));
+            properties.load(new FileInputStream(new File(Constants.getCredentialsFileName())));
+
+            return properties.getProperty(key);
+        }
+        catch(IOException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Utilities1");
+            Email.sendErrorEmail(e);
+        }
+        return null;
+    }
+
+    static String getProperty(String key, final String PROPERTIES_FILE_NAME) {
+        try {
+            Properties properties = new Properties();
+            properties.load(new FileInputStream(new File(PROPERTIES_FILE_NAME)));
 
             return properties.getProperty(key);
         }

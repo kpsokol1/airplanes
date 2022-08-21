@@ -77,7 +77,7 @@ class DB {
         StringJoiner sqlRowsWithValues = new StringJoiner(",");
         StringJoiner sqlValues = new StringJoiner(",");
 
-        if(table == RAW_DATA_TABLE){
+        if(table == Constants.getRawDataTable()){
             sql = "INSERT INTO `" + table + "` (";
 
             for (Map.Entry<String, String> entry : aircraftData.entrySet()) {
@@ -86,14 +86,14 @@ class DB {
             }
             statement.addBatch (sql + sqlRowsWithValues.toString() + ")" + " VALUES( " + sqlValues.toString() + ")");
         }
-        if(table == CLEAN_DATA_TABLE){
+        if(table == Constants.getCleanDataTable()){
             String query = "";
             if (updateRecord) {
-                sql = "DELETE FROM `" + CLEAN_DATA_TABLE + "` WHERE ICAO = '" + aircraftData.get("ICAO") + "' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "'";
+                sql = "DELETE FROM `" + Constants.getCleanDataTable() + "` WHERE ICAO = '" + aircraftData.get("ICAO") + "' AND Time > '" + toLocalDateTime((LocalDateTime.parse(aircraftData.get("Time"), DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")).toEpochSecond(ZoneOffset.UTC)) - timePlaneStillAlive) + "'";
                 statement.addBatch(sql);
                 //updateRecord = false;
             }
-            sql = "INSERT INTO `" + CLEAN_DATA_TABLE + "` (";
+            sql = "INSERT INTO `" + Constants.getCleanDataTable() + "` (";
             for (Map.Entry<String, String> entry : aircraftData.entrySet()) {
                 sqlRowsWithValues.add(" `" + entry.getKey() + "`");
                 sqlValues.add("'" + entry.getValue() + "'");
@@ -106,9 +106,9 @@ class DB {
 
     static void addRecordToDBQueue(HashMap<String, String> aircraftData) throws SQLException {
         try {
-            populateSQLQuery(aircraftData, RAW_DATA_TABLE);
+            populateSQLQuery(aircraftData, Constants.getRawDataTable());
             if (writeToCleanDataTable(aircraftData, recentPlanes)) {
-                populateSQLQuery(aircraftData, CLEAN_DATA_TABLE);
+                populateSQLQuery(aircraftData, Constants.getCleanDataTable());
             }
         }
         catch (SQLException e) {

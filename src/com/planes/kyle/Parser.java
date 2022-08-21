@@ -19,9 +19,6 @@ import static java.lang.Thread.sleep;
 
 public class Parser
 {
-    static final String RAW_DATA_TABLE = "Raw1";
-    static final String CLEAN_DATA_TABLE = "Clean1";
-    static final String CREDENTIALS_FILE_NAME = "credentials.properties";
     static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     static Connection conn;
     static Statement statement;
@@ -66,45 +63,54 @@ public class Parser
             return;
         }
         else if(args.length < 2){
+            System.out.println("Missing Properties File");
+            return;
+        }
+        else if(args.length < 3){
             System.out.println("Missing Station Name");
             return;
         }
+
+        //initialize properties
+        final String PROPERTIES_FILE_NAME = args[1];
+        Constants.initializeConstants(PROPERTIES_FILE_NAME);
+
         try {
             //Initialize database connection
             DBConnect();
 
             //Create tables if they do not exist in the DB
-            if (!checkIfTableExists(RAW_DATA_TABLE)) createTable(RAW_DATA_TABLE);
-            if (!checkIfTableExists(CLEAN_DATA_TABLE)) {
-                createTable(CLEAN_DATA_TABLE);
+            if (!checkIfTableExists(Constants.getRawDataTable())) createTable(Constants.getRawDataTable());
+            if (!checkIfTableExists(Constants.getCleanDataTable())) {
+                createTable(Constants.getCleanDataTable());
             }
             else {
                 populateRecentPlanesList();
             }
 
             //If pass additional file name as argument then process this file as aircraft database
-            if (args.length == 3) {
+            if (args.length == 4) {
                 parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
                 System.out.println("Done");
                 return;
             }
-            if(args.length == 4){
+            if(args.length == 5){
                 parseTextFile(conn,args[3], "Airplane_Types", ","); //List of Aircrafts
                 parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
             }
-            if(args.length > 4) {
+            if(args.length > 5) {
                 parseTextFile(conn,args[4],"airports",","); //List of Airports
                 parseTextFile(conn,args[3], "Airplane_Types", ","); //List of Aircrafts
                 parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
             }
-            stationName = args[1];
+            stationName = args[2];
             //Read the aircraft data file (passed in with arguments)
             while(true){
                 while (!conn.isClosed()) {   //while we have a connection to the database
                     statement = conn.createStatement();
                     //Utilities.createGeoFence(38.22942, -85.56894, 0.5);
 
-                    readAircraftFile(args[0],args[1]);
+                    readAircraftFile(args[0],stationName);
 
                     //Wait below interval before processing file again (ms)
                     sleep(refreshInterval*1000);
@@ -227,7 +233,7 @@ public class Parser
     }
 
    private static void populateRecentPlanesList() throws SQLException {
-        String query = "SELECT * FROM `"+CLEAN_DATA_TABLE+"` WHERE TIMESTAMPDIFF(SECOND, STR_TO_DATE(TIME, '%Y/%m/%d %H:%i:%s'),Now()) < '"+timePlaneStillAlive+"'";
+        String query = "SELECT * FROM `"+Constants.getCleanDataTable()+"` WHERE TIMESTAMPDIFF(SECOND, STR_TO_DATE(TIME, '%Y/%m/%d %H:%i:%s'),Now()) < '"+timePlaneStillAlive+"'";
         try {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery(query);

@@ -90,18 +90,18 @@ public class Parser
 
             //If pass additional file name as argument then process this file as aircraft database
             if (args.length == 4) {
-                parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
+                parseTextFile(conn, args[3], "Aircrafts", ","); //All Airplanes Database
                 System.out.println("Done");
                 return;
             }
             if(args.length == 5){
-                parseTextFile(conn,args[3], "Airplane_Types", ","); //List of Aircrafts
-                parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
+                parseTextFile(conn,args[4], "Airplane_Types", ","); //List of Aircrafts
+                parseTextFile(conn, args[3], "Aircrafts", ","); //All Airplanes Database
             }
             if(args.length > 5) {
-                parseTextFile(conn,args[4],"airports",","); //List of Airports
-                parseTextFile(conn,args[3], "Airplane_Types", ","); //List of Aircrafts
-                parseTextFile(conn, args[2], "Aircrafts", ","); //All Airplanes Database
+                parseTextFile(conn,args[5],"airports",","); //List of Airports
+                parseTextFile(conn,args[4], "Airplane_Types", ","); //List of Aircrafts
+                parseTextFile(conn, args[3], "Aircrafts", ","); //All Airplanes Database
             }
             stationName = args[2];
             //Read the aircraft data file (passed in with arguments)

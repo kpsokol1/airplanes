@@ -120,6 +120,8 @@ public class Scraper
             // for jpg
             String fullPath = path + "/image.jpg";
             ImageIO.write(image, "jpg",new File(fullPath));
+            image.flush();
+            image = null;
             return true;
         }
         catch(IOException e){

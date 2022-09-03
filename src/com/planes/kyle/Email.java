@@ -124,12 +124,12 @@ public class Email {
             email = rs1.getString("email");
             lou_alerts = (rs1.getInt("lou_alerts") == 1);
             ala_alerts = (rs1.getInt("ala_alerts") == 1);
-            if(stationName == "Louisville,KY"){
+            if(stationName.equals("Louisville,KY")){
                 if (lou_alerts){
                     sendEmail(email,subjectLine,messageToSend + "\n" + "http://10.128.107.117/combine1090" + "\nTime Sent: " + formatter.format(date) + " " + TimeZone.getDefault().getDisplayName(true,TimeZone.SHORT),fileLocation);
                 }
             }
-            else{
+            else if(stationName.equals("Tuscaloosa,AL")){
                 if (ala_alerts){
                     sendEmail(email,subjectLine,messageToSend + "\n" + "http://10.128.107.117/combine1090" + "\nTime Sent: " + formatter.format(date) + " " + TimeZone.getDefault().getDisplayName(true,TimeZone.SHORT),fileLocation);
                 }

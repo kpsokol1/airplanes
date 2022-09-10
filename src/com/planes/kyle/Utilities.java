@@ -49,6 +49,7 @@ class Utilities {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 e.printStackTrace();
+                System.out.println(LocalDateTime.now());
                 Email.sendErrorEmail(e);
             }
             String subject2 = "(" + stationName + ") " + planeRegistration + " Plane Alert";
@@ -67,6 +68,7 @@ class Utilities {
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
+                        System.out.println(LocalDateTime.now());
                         Email.sendErrorEmail(e);
                     }
                     if (!alreadySent) {
@@ -101,6 +103,7 @@ class Utilities {
                         } catch (SQLException e) {
                             System.out.println(e.getMessage());
                             e.printStackTrace();
+                            System.out.println(LocalDateTime.now());
                             Email.sendErrorEmail(e);
                         }
                     }
@@ -124,6 +127,7 @@ class Utilities {
                     }
                     catch (Exception e) {
                         e.printStackTrace();
+                        System.out.println(LocalDateTime.now());
                         Email.sendErrorEmail(e);
                     }
                     if (!alreadySent) {
@@ -229,6 +233,7 @@ class Utilities {
         }
         catch(IOException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("Utilities1");
             Email.sendErrorEmail(e);
         }
@@ -245,6 +250,7 @@ class Utilities {
         catch(IOException e) {
             System.out.println(e.getMessage());
             System.out.println("Utilities1");
+            System.out.println(LocalDateTime.now());
             Email.sendErrorEmail(e);
         }
         return null;
@@ -272,6 +278,7 @@ class Utilities {
         catch(SQLException e) {
             System.out.println(e.getMessage());
             System.out.println("Utilities2");
+            System.out.println(LocalDateTime.now());
             Email.sendErrorEmail(e);
         }
         finally {
@@ -283,6 +290,7 @@ class Utilities {
             catch (Exception e) {
                 System.out.println(e.getMessage());
                 System.out.println("Utilities1");
+                System.out.println(LocalDateTime.now());
                 Email.sendErrorEmail(e);
             }
         }

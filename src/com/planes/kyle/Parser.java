@@ -128,6 +128,7 @@ public class Parser
         catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
+            System.out.println(LocalDateTime.now());
             System.out.println("Parser1");
             Email.sendErrorEmail(e);
         }
@@ -168,6 +169,7 @@ public class Parser
         catch (Exception e) {  //probably did not find it in the aircraft database
 
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("Parser 2");
             Email.sendErrorEmail(e);
         }
@@ -224,6 +226,7 @@ public class Parser
         }
         catch (SQLException e) {
             e.printStackTrace();
+            System.out.println(LocalDateTime.now());
             Email.sendErrorEmail(e);
         }
         finally {
@@ -253,6 +256,7 @@ public class Parser
    }
         catch(SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("Parser j");
             e.printStackTrace();
             Email.sendErrorEmail(e);
@@ -320,6 +324,7 @@ public class Parser
             System.out.println(e.getMessage());
             System.out.println(currentAirline);
             e.printStackTrace();
+            System.out.println(LocalDateTime.now());
             System.out.println("Parser3");
             Email.sendErrorEmail(e);
         }

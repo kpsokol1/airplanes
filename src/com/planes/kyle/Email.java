@@ -5,9 +5,8 @@ import java.io.StringWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Time;
-import javafx.scene.chart.ScatterChart;
 
+import java.time.LocalDateTime;
 import java.util.*;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
@@ -103,6 +102,7 @@ public class Email {
         }
         catch (MessagingException ex) {
             ex.printStackTrace();
+            System.out.println(LocalDateTime.now());
             System.out.println("Email1");
         }
     }
@@ -158,6 +158,7 @@ public class Email {
         }
         catch(SQLException e1){
             e1.printStackTrace();
+            System.out.println(LocalDateTime.now());
             System.out.println("Email2");
         }
     }

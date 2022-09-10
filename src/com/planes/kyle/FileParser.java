@@ -2,6 +2,7 @@ package com.planes.kyle;
 
 import java.io.*;
 import java.sql.*;
+import java.time.LocalDateTime;
 
 class FileParser {
 
@@ -60,6 +61,7 @@ class FileParser {
         }
         catch (IOException | SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("FP1");
             Email.sendErrorEmail(e);
         }
@@ -69,6 +71,7 @@ class FileParser {
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
+                System.out.println(LocalDateTime.now());
                 System.out.println("FP2");
                 Email.sendErrorEmail(e);
             }
@@ -98,6 +101,7 @@ class FileParser {
         }
         catch (IOException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("FP1");
             Email.sendErrorEmail(e);
         }

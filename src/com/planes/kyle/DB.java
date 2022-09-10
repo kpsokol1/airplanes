@@ -18,6 +18,7 @@ class DB {
         }
         catch (Exception e) {
             System.out.println("Unable to find and load driver: " + e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("DB1");
             Email.sendErrorEmail(e);
         }
@@ -34,6 +35,7 @@ class DB {
         }
         catch(SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("DB2");
             Email.sendErrorEmail(e);
         }
@@ -45,6 +47,7 @@ class DB {
             }
             catch (Exception e) {
                 System.out.println(e.getMessage());
+                System.out.println(LocalDateTime.now());
                 System.out.println("DB3");
                 Email.sendErrorEmail(e);
             }
@@ -118,6 +121,7 @@ class DB {
         }
         catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             System.out.println("DB4");
             Email.sendErrorEmail(e);
         }
@@ -129,6 +133,7 @@ class DB {
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
+            System.out.println(LocalDateTime.now());
             e.printStackTrace();
             System.out.println("DB5");
             Email.sendErrorEmail(e);

@@ -1,5 +1,6 @@
 package com.planes.kyle;
 
+import java.time.LocalDateTime;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import javax.imageio.ImageIO;
@@ -59,6 +60,7 @@ public class Scraper
         catch (Exception e){
             e.printStackTrace();
             Email.sendErrorEmail(e);
+            System.out.println(LocalDateTime.now());
             return "problem";
         }
     }
@@ -102,6 +104,7 @@ public class Scraper
         catch (Exception e){
             e.printStackTrace();
             Email.sendErrorEmail(e);
+            System.out.println(LocalDateTime.now());
             return false;
         }
     }
@@ -127,6 +130,7 @@ public class Scraper
         catch(IOException e){
             System.out.println("Hi " + imageUrl);
             e.printStackTrace();
+            System.out.println(LocalDateTime.now());
             Email.sendErrorEmail(e);
             return false;
         }
